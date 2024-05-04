@@ -1,0 +1,28 @@
+task3
+.
+.
+.
+.
+def check_complexity(password):
+    if len(password) >=8:
+        if any((i.isupper() for i in password)) and any ((i.islower() for i in password)) and any((i.isdigit() for i in password)) and any((i.isalnum() for i in password)):
+            print("password is strong")
+        else:
+            if not any(i.isupper() for i in password):
+                print("password should contan at least one capital letter")
+                
+            if not any(i.islower() for i in password):
+                print("password should contan at least one small letter")
+                
+            if not any(i.isdigit() for i in password):
+                print("password should contan at least one digit")
+                
+            if not any(i.isalnum() for i in password):
+                print("password should contan at least one Special Character")
+    else:
+        print("password should be 8 characters long")
+        
+        
+password= input("Enter a password: ")
+check_complexity(password)
+            
